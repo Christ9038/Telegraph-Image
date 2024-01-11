@@ -1,3 +1,4 @@
+
 export async function onRequest(context) {
     // Contents of context object
     const {
@@ -25,7 +26,8 @@ export async function onRequest(context) {
       //res.push(tmp)
     //}
     const info = JSON.stringify(value.keys);
-    info.sort((a, b) => b.metadata.TimeStamp - a.metadata.TimeStamp);
+    alert(info);
+    //info.sort((a, b) => b.metadata.TimeStamp - a.metadata.TimeStamp);
     return new Response(info);
 
   }
