@@ -25,9 +25,10 @@ export async function onRequest(context) {
       //}
       //res.push(tmp)
     //}
-    const info = JSON.stringify(value.keys);
-    alert(info);
-    //info.sort((a, b) => b.metadata.TimeStamp - a.metadata.TimeStamp);
+    let keys = JSON.stringify(value.keys);
+    keys.sort((a, b) => b.metadata.TimeStamp - a.metadata.TimeStamp);
+    const info = keys;
+
     return new Response(info);
 
   }
